@@ -20,4 +20,22 @@ router.post("/register", async (req,res) => {
     })
 })
 
+/* Login Validation */
+router.post('/login', async (req,res) => {
+
+    const {email, password} = req.body
+
+    //TODO: password
+    const user = await Users.findOne({ where: {email: email}})
+
+    if(!user) req.json({error: "User doesn't exist"})
+
+    bcrypt.compare(password, user.password).then((match) => {
+
+        if(!match) res.json({error: "Wrong Password!"})
+
+        res.json({Response: "You logged In"})
+    })
+})
+
 module.exports = router
