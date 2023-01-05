@@ -1,2 +1,2 @@
 # MegaCMS
-Nodejs 
+React - NodeJS/Express - RestAPI - Mysql - SequelizeJS
