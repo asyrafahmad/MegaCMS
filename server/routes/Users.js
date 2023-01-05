@@ -3,6 +3,9 @@ const router = express.Router()
 const { Users } = require("../models")
 const bcrypt = require('bcrypt')
 
+const { validateToken } = require("../middlewares/AuthMiddleware")
+const { sign } = require("jsonwebtoken")
+
 /* Registration */
 router.post("/register", async (req,res) => {
     
@@ -28,13 +31,16 @@ router.post('/login', async (req,res) => {
     //TODO: password
     const user = await Users.findOne({ where: {email: email}})
 
-    if(!user) req.json({error: "User doesn't exist"})
+    if(!user) res.json({error: "User doesn't exist"})
 
     bcrypt.compare(password, user.password).then((match) => {
 
         if(!match) res.json({error: "Wrong Password!"})
 
-        res.json({Response: "You logged In"})
+        // For User Session Token (generate JWT access token)
+        const accessToken = sign({email: user.email, username: user.username, id: user.id}, "ImportantSecretToken")
+
+        res.json({Response: "You logged In", Token: accessToken, email: email, username: user.username, id: user.id})
     })
 })
 
