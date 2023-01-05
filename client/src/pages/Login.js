@@ -9,15 +9,11 @@ function Login() {
     <div className="App">
       <div className="error-image">
 
-        <div id="global-loader">
-          {/* <img src="../assets/images/loader.svg" className="loader-img" alt="Loader"/> */}
-        </div>
-
         <div className="page">
           <div>
             <div className="col col-login mx-auto mt-7">
               <div className="text-center">
-                <a href="index.html"><img src="../public/assets/images/brand/logo.png" className="header-brand-img" alt=""/></a>
+                <a href="index.html"><img src="../assets/images/brand/logo.png" className="header-brand-img" alt=""/></a>
               </div>
             </div>
             <div className="container-login100">
@@ -41,7 +37,7 @@ function Login() {
                     </span>
                   </div>
                   <div className="text-center pt-1">
-                    <p className="mb-0"><a href="forgot-password.html" className="text-primary ms-1">Forgot Password?</a></p>
+                    <p className="mb-0"><Link href="forgot-password.html" className="text-primary ms-1">Forgot Password?</Link></p>
                   </div>    
                   <Link to="/index"> 
                     <div className="container-login100-form-btn">
@@ -49,7 +45,9 @@ function Login() {
                     </div>
                   </Link>
                   <div className="text-center pt-3">
-                    <p className="text-dark mb-0">Not a member?<a href="./pages/Index.js" className="text-primary ms-1"> Sign Up</a></p>
+                    <p className="text-dark mb-0">Not a member?
+                      <Link to="/register" className="text-primary ms-1"> Sign Up</Link>
+                    </p>
                   </div>
                   <div className=" flex-c-m text-center mt-2">
                     <p className="text-muted">Or</p>

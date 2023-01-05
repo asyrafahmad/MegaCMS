@@ -1,11 +1,18 @@
 const express = require('express')
-const cors = require("cors")
 
 const app = express()
+const cors = require("cors")
 
 const db = require('./models')
 
 app.use(cors())
+
+//Router
+app.use(express.json())
+
+const usersRouter = require('./routes/Users')
+app.use("/authentication", usersRouter)
+//Router
 
 db.sequelize.sync().then(() => {
     app.listen(3002, () => {

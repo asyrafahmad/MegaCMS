@@ -1,0 +1,33 @@
+Guide
+
+1. npx create-react-app .                                       = initiate client file/folder (node_modules folder,public folder,src folder, .gitignore, package.json, yarn.lock, README.md)
+2. npm install axios                                            = to use RestAPI
+3. npm install react-router-dom                                 = to use react routing
+4. npm install formik                                           = to create form
+5. npm install yup                                              = for input validation
+6. npm install @material-ui/core                                = add UI
+7. npm install @material-ui/icons                               = add icons
+
+
+Shortcut
+- rfce
+
+
+
+*******************************************************************************************************************
+Innovation
+
+OLD                                             NEW                                 VERSION
+useHistory()                                    useNavigate()
+navigate.push("/")                              navigate("/")                       React Router V6
+component                                       element
+
+*******************************************************************************************************************
+1. create helpers and createContext
+
+
+*******************************************************************************************************************
+CONCLUSION
+1. React
+2. formik
+3. yup
