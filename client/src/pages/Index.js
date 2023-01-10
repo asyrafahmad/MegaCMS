@@ -1,9 +1,8 @@
 import React from 'react'
-import {Routes, Route, Link, AppBody} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 import Header from './Header'
 import Sidebar from './Sidebar'
-import Dashboard_Sales from './blog/dashboard'
 
 function Index() {
   return (
@@ -29,7 +28,7 @@ function Index() {
                             {/* <!-- PAGE-HEADER --> */}
                             <div className="page-header">
                                 <div>
-                                    <h1 className="page-title">Hi! Welcome To User</h1>
+                                    <h1 className="page-title">Hi! Welcome User</h1>
                                 </div>
                             </div>
                             {/* <!-- PAGE-HEADER END --> */}

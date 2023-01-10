@@ -4,10 +4,9 @@ import {Link} from 'react-router-dom'
 import Header from '../Header'
 import Sidebar from '../Sidebar'
 
-function Dashboard_Sales() {
+function dashboard() {
   return (
     <div>
-        
         <br/><br/><br/>
         <div className="page">
             <div className="page-main">
@@ -785,4 +784,4 @@ function Dashboard_Sales() {
   )
 }
 
-export default Dashboard_Sales
+export default dashboard

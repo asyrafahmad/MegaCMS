@@ -34,6 +34,7 @@ function Login() {
           // })
 
           navigate("/index")
+          // window.location.reload(true)
 
           console.log(response.data)
         }
