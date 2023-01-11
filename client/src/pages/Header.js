@@ -37,7 +37,8 @@ function Header() {
             }
 
             })
-    }, [setAuthState])
+    // eslint-disable-next-line
+    }, [setAuthState]) 
 
     const logout = () => {
         localStorage.removeItem("accessToken")

@@ -26,12 +26,12 @@ function Login() {
         } else {
           // store token in web local storage
           localStorage.setItem("accessToken", response.data.Token)
-          // setAuthState({
-          //   email: response.data.email,
-          //   username: response.data.username,
-          //   id: response.data.id,
-          //   status: true
-          // })
+          setAuthState({
+            email: response.data.email,
+            username: response.data.username,
+            id: response.data.id,
+            status: true
+          })
 
           navigate("/index")
           // window.location.reload(true)
