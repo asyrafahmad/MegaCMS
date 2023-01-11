@@ -7,15 +7,22 @@ Guide
 5. npm install yup                                              = for input validation
 6. npm install @material-ui/core                                = add UI
 7. npm install @material-ui/icons                               = add icons
+-- Webpack --
+8. npm install webpack webpack-cli                              = installing webpack and webpack CLI
+9. npm install babel-core
+10. npm install babel-loader
+11. npm install babel-preset-es2015
+12. npm install style-loader 
+13. npm install css-loader
 
-
-Shortcut
+*******************************************************************************************************************
+SHORTCUT
 - rfce
 
 
 
 *******************************************************************************************************************
-Innovation
+INNOVATION
 
 OLD                                             NEW                                 VERSION
 useHistory()                                    useNavigate()
@@ -31,3 +38,8 @@ CONCLUSION
 1. React
 2. formik
 3. yup
+
+
+*******************************************************************************************************************
+
+DOM = Document Object Module
